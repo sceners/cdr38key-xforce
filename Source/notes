@@ -1,0 +1,151 @@
+FAQ_TEXT label byte
+db 0dh,0ah
+db "                   -= CDRWin/DAO V3.8 Open-Source Keymaker V2.0 -",0dh,0ah
+db "                             Small FAQ for People who do Care =-",0dh,0ah
+db 0dh,0ah
+db "[I] What is this all about?",0dh,0ah
+db 0dh,0ah
+db "Tired and Sick of burning coasters with Goldenhawk's Cdrwin?",0dh,0ah
+db "Before blaming your girlfriend, see why it's in most cases NOT her fault, nor the",0dh,0ah
+db "fault of your cdr-writer, nor of Cdrwin itself, but simply a consequence of using",0dh,0ah
+db "a bad key or crack.",0dh,0ah
+db 0dh,0ah
+db "[II] Why should I care?",0dh,0ah
+db 0dh,0ah
+db "Because you want to save your hard-earned bucks by avoiding future coasters.",0dh,0ah
+db 0dh,0ah
+db "[III] I'm convinced, but how do I use Cdrwin without adding to my coaster-",0dh,0ah
+db "collection?",0dh,0ah
+db 0dh,0ah
+db "It's simple. Don't use any keymaker/crack that is not written by me :)",0dh,0ah
+db 0dh,0ah
+db "[IV] Unfortunatly, it's too late - I've already used a bad crack. What now?",0dh,0ah
+db 0dh,0ah
+db "Find the person responsible for the bad crack and make him eat all your coasters.",0dh,0ah
+db "Make him suffer real hard for his stupidity. Nowadays the world has seen too many",0dh,0ah
+db "so-called crackers who want to cover themselves in unjustified glory.",0dh,0ah
+db 0dh,0ah
+db "[V] How do I use your keymaker?",0dh,0ah
+db 0dh,0ah
+db "Is this the 1st time you run Cdrwin? If yes, then use my keymaker and enter your",0dh,0ah
+db "Name/Company to receive a valid Unlock/Check-Key. You can also manipulate the",0dh,0ah
+db "year-range within which your key will be valid. Note that the time is not",0dh,0ah
+db "dependent on your system clock, but on the build version of Cdrwin (i.e. Cdrwin",0dh,0ah
+db "V3.8a was released 3/2000, so you should make sure that your key is valid within",0dh,0ah
+db "that date).",0dh,0ah
+db 0dh,0ah
+db "If you've already used Cdrwin and even run a crack, then there are two possible",0dh,0ah
+db "ways to continue. A) Did you apply a crackpatch? If yes, sorry for you, but you",0dh,0ah
+db "have to reinstall Cdrwin, because there is no way of telling what bytes the",0dh,0ah
+db "cracker has modified. B) Did you run another keymaker? If yes, then you'll want",0dh,0ah
+db "to know if the key you've used was OK and didn't cause any coasters. In order to",0dh,0ah
+db "do that, click on `Get information from cdrwin.dat` and point to your cdrwin path",0dh,0ah
+db "where you should find the file cdrwin.dat. Latter contains the keycode",0dh,0ah
+db "information. If you receive no error message, then you are fine and you can",0dh,0ah
+db "continue using that keycode.",0dh,0ah
+db "If, however, you receive a message saying that the keycode is not 100%, you've",0dh,0ah
+db "the option to fix the key. I can only strongly suggest that you do so....",0dh,0ah
+db 0dh,0ah
+db "[VI] I have an original key, but it expired. Can you make it valid again?",0dh,0ah
+db 0dh,0ah
+db "Yes, using my keymaker you can bring your old key back to life. To do so, first",0dh,0ah
+db "click on `don't randomize`. Then click on `Get information from cdrwin.dat` and",0dh,0ah
+db "point to your cdrwin path where you should find the file cdrwin.dat. Latter",0dh,0ah
+db "contains the keycode infromation of your original key. When done, you can change",0dh,0ah
+db "the expiration range. My keymaker will automatically calculate the new key.",0dh,0ah
+db 0dh,0ah
+db "[VII] I have no girlfriend and need something else to get laid. Can you give me",0dh,0ah
+db "more technical information about how the keyscheme of Cdrwin works?",0dh,0ah
+db 0dh,0ah
+db "Example:",0dh,0ah
+db "Name:       Raymond E. Feist",0dh,0ah
+db "Company:    Riftwar",0dh,0ah
+db "Unlock Key: 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db "Check Key:  9357BB62-8CAC8011-908DCC07-8F76F774",0dh,0ah
+db 0dh,0ah
+db "Cdrwin uses an Unlock Key and a Check Key. The latter is trivial as it is only",0dh,0ah
+db "used as a checksum check (hence the name!) that you've entered the Unlock Key",0dh,0ah
+db "correctly.",0dh,0ah
+db 0dh,0ah
+db "The Unlock Key consists of -4- 32bit values. Use the following information in",0dh,0ah
+db "addition to the keymaker source to get the idea.",0dh,0ah
+db 0dh,0ah
+db "1) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   Checksum of Name/Company. Further, using this 32bit value, Cdrwin",0dh,0ah
+db "   differentiates between unlock codes for Cdrwin and unlock codes for DAO",0dh,0ah
+db "   (each app uses an unique checksum-table). At last, the value is also used to",0dh,0ah
+db "   determine if your key is blacklisted or not.",0dh,0ah
+db 0dh,0ah
+db "2) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   Encoded expiration information.",0dh,0ah
+db 0dh,0ah
+db "3) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   Second Checksum, invoked after Cdrwin is started for the first time. If",0dh,0ah
+db "   invalid, anti-piracy message and exit.",0dh,0ah
+db 0dh,0ah
+db "4) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   Hidden Checksum, during cd-burn process. If invalid, ... another item for",0dh,0ah
+db "   your coaster collection.",0dh,0ah
+db 0dh,0ah
+db "5) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   Hidden Checksum, same as in 4).",0dh,0ah
+db 0dh,0ah
+db "6) 022BD9CE-8E8759DF-1E0A95D8-917C62AC",0dh,0ah
+db 0dh,0ah
+db "   ! IMPORANT !",0dh,0ah
+db "   Here is the answer why even my keymaker does not create keys that are 100%",0dh,0ah
+db "   identical with keys which have been legally purchased.",0dh,0ah
+db 0dh,0ah
+db "   The two 16bit values are not yet (meaningfully) checked as of Cdrwin V3.8b.",0dh,0ah
+db "   This doesn't mean that my keymaker is not 100% working. It IS 100% for the",0dh,0ah
+db "   current version of Cdrwin and most probable for future versions as well,",0dh,0ah
+db "   UNTIL the programmers at Goldenhawk decide to implent that check. And until",0dh,0ah
+db "   then, I'll make sure that with each new version of Cdrwin my keymaker",0dh,0ah
+db "   doesn't miss that check. Fair enough?",0dh,0ah
+db "   For the smart ones among you: This is were the mysterious `don't randomize`",0dh,0ah
+db "   comes from. It simply prevents my keymaker to insert two random 16bit values",0dh,0ah
+db "   here. This is especially important when you want to change the expiration of",0dh,0ah
+db "   your real key, which has of course, the CORRECT two 16bit values. We don't",0dh,0ah
+db "   want to overwrite those with random ones... :)",0dh,0ah
+db 0dh,0ah
+db "   TO ALL THOSE !%/$) IDIOTS WHO STILL CLAIM THAT THEY'RE HAVING",0dh,0ah
+db "   PROBLEMS USING MY KEYMAKER:",0dh,0ah
+db 0dh,0ah
+db "   FOAD! You are simply wasting my time and the time of others with your",0dh,0ah
+db "   unqualified rubbish. If you think Cdrwin doesn't work probably after you've",0dh,0ah
+db "   used my keymaker, then blame it on someone else. Go and blame your g/f.",0dh,0ah
+db "   Or if you feel any safer, use one of the many patches that're floating around,",0dh,0ah
+db "   which claim that they are safer to use than a key code. Believe whatever you",0dh,0ah
+db "   want to believe. History has shown us the strength behind ignorance.",0dh,0ah
+db 0dh,0ah
+db "[VIII] Fine, I see that you are convinced of your own work so I'll use it, too.",0dh,0ah
+db "Last question: With your ego, do you still have any friends left?",0dh,0ah
+db 0dh,0ah
+db "I wouldn't go that far to call anyone my friend :> Yet, greetings to the following",0dh,0ah
+db "people :)",0dh,0ah
+db 0dh,0ah
+db "      - everyone in X-FORCE. After years of fun & sorrow, I still love you!",0dh,0ah
+db 0dh,0ah
+db "      - the first generation of UCF - when cracking had still some style.",0dh,0ah
+db "        Greetings at this place especially to Marquis de Soiree, whom I consider",0dh,0ah
+db "        my one and only tutor.",0dh,0ah
+db 0dh,0ah
+db "      - Random, for he is the sickest of all people I know :) Without him,",0dh,0ah
+db "        things are just half as much fun.",0dh,0ah
+db 0dh,0ah
+db "      - everyone in UNION and of course every proud #RC member :)",0dh,0ah
+db "        Especially to Devil, for the often philosophical debates; to Ratso, to",0dh,0ah
+db "        Drone, to ACP, to G-Rom, to Halvar, to Dezzy.",0dh,0ah
+db 0dh,0ah
+db "      - every op in #WA; especially to Hugo for the endless debates why M$ is",0dh,0ah
+db "        evil or not :)",0dh,0ah
+db 0dh,0ah
+db "      - everyone in COUNCIL.",0dh,0ah
+db 0dh,0ah
+db "The Riddler / X-FORCE / UNION.",0dh,0ah
+db 0

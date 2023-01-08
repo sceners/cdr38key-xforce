@@ -1,0 +1,58 @@
+#include "resource.h"
+#define IDD_DIALOG                                      100
+#define IDC_NAME                                       3001
+#define IDC_EMAIL                                      3002
+#define IDC_UNLOCKKEY                                  3003
+#define IDC_CHECKKEY                                   3004
+#define IDC_CDRWIN                                     3006
+#define IDC_DAO                                        3007
+#define IDC_MONTHSTART                                 3010
+#define IDC_YEARSTART                                  3011
+#define IDC_MONTHEND                                   3012
+#define IDC_YEAREND                                    3013
+#define IDC_RANDOMIZE                                  3014
+#define IDC_GETDAT                                     3100
+#define IDC_SAVE                                       3101
+#define IDC_EDITFAQ                                    3200
+
+IDD_DIALOG DIALOGEX MOVEABLE PURE LOADONCALL DISCARDABLE	10, 10, 315, 232, 0
+STYLE DS_MODALFRAME | 0x0004 | DS_CENTER | WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU | WS_VISIBLE | WS_POPUP
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "CDRWin/DAO V3.8 Open-Source Keymaker (C) The Riddler / X-FORCE V2.0"
+FONT 8, "Verdana", 700, 0 /*FALSE*/
+BEGIN
+    GROUPBOX        "User Information", 8, 	14,4,287,101, 0, , 0
+    LTEXT           "Your &Name:", 65535, 	45,19,39,11, SS_LEFT, , 0
+    EDITTEXT        3001, 	87,18,157,11, ES_AUTOHSCROLL | ES_LEFT, , 0
+    LTEXT           "Company/&Email:", 0, 	29,35,57,11, SS_LEFT, , 0
+    EDITTEXT        3002, 	87,34,157,11, ES_AUTOHSCROLL | ES_LEFT, , 0
+    LTEXT           "Expiration:", 56, 	48,50,39,12, SS_LEFT, , 0
+    CONTROL         "CDRWin", 3006, "Button", BS_AUTORADIOBUTTON, 	249,18,40,12, , 0
+    CONTROL         "DAO", 3007, "Button", BS_AUTORADIOBUTTON, 	249,34,28,12, , 0
+    EDITTEXT        3010, 	133,50,16,11, ES_AUTOHSCROLL | ES_LEFT, , 0
+    EDITTEXT        3011, 	175,50,26,11, ES_AUTOHSCROLL | ES_LEFT, , 0
+    PUSHBUTTON      "Get Information from cdrwin.dat", 3100, 	184,86,112,10, 0, , 0
+    CONTROL         "don't randomize", 3014, "Button", BS_LEFTTEXT | BS_AUTOCHECKBOX | WS_TABSTOP, 	118,86,63,10, , 0
+    GROUPBOX        "Unlock Information", 54, 	14,108,287,51, 0, , 0
+    LTEXT           "&Unlock Key:", 52, 	44,121,41,11, SS_LEFT, , 0
+    EDITTEXT        3003, 	87,121,157,11, ES_AUTOHSCROLL | ES_READONLY | ES_LEFT, , 0
+    LTEXT           "&Check Key:", 53, 	45,137,40,11, SS_LEFT, , 0
+    EDITTEXT        3004, 	87,137,157,11, ES_AUTOHSCROLL | ES_READONLY | ES_LEFT, , 0
+    LTEXT           "Month", 58, 	152,50,22,12, SS_LEFT, , 0
+    LTEXT           "Year", 59, 	204,50,21,12, SS_LEFT, , 0
+    LTEXT           "Valid from", 60, 	93,50,36,12, SS_LEFT, , 0
+    EDITTEXT        3012, 	133,66,16,12, ES_AUTOHSCROLL | ES_READONLY | ES_LEFT, , 0
+    LTEXT           "Month", 62, 	152,67,22,11, SS_LEFT, , 0
+    EDITTEXT        3013, 	175,66,26,12, ES_AUTOHSCROLL | ES_READONLY | ES_LEFT, , 0
+    LTEXT           "Year", 63, 	204,67,21,11, SS_LEFT, , 0
+    LTEXT           "Valid to", 66, 	93,67,36,11, SS_LEFT, , 0
+    EDITTEXT        3200, 	14,167,287,51, ES_AUTOHSCROLL | ES_MULTILINE | ES_READONLY | ES_LEFT | WS_VSCROLL, , 0
+    PUSHBUTTON      "Save as cdrwin.dat", 3101, 	29,86,73,10, 0, , 0
+END
+
+
+
+
+
+
+

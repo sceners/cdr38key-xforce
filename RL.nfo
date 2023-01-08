@@ -1,0 +1,149 @@
+
+                   -= CDRWin/DAO V3.8 Open-Source Keymaker V2.0 -
+                             Small FAQ for People who do Care =-
+
+[I] What is this all about?
+
+Tired and Sick of burning coasters with Goldenhawk's Cdrwin?
+Before blaming your girlfriend, see why it's in most cases NOT her fault, nor the
+fault of your cdr-writer, nor of Cdrwin itself, but simply a consequence of using
+a bad key or crack.
+
+[II] Why should I care?
+
+Because you want to save your hard-earned bucks by avoiding future coasters.
+
+[III] I'm convinced, but how do I use Cdrwin without adding to my coaster-
+collection?
+
+It's simple. Don't use any keymaker/crack that is not written by me :)
+
+[IV] Unfortunatly, it's too late - I've already used a bad crack. What now?
+
+Find the person responsible for the bad crack and make him eat all your coasters.
+Make him suffer real hard for his stupidity. Nowadays the world has seen too many
+so-called crackers who want to cover themselves in unjustified glory.
+
+[V] How do I use your keymaker?
+
+Is this the 1st time you run Cdrwin? If yes, then use my keymaker and enter your
+Name/Company to receive a valid Unlock/Check-Key. You can also manipulate the
+year-range within which your key will be valid. Note that the time is not
+dependent on your system clock, but on the build version of Cdrwin (i.e. Cdrwin
+V3.8a was released 3/2000, so you should make sure that your key is valid within
+that date).
+
+If you've already used Cdrwin and even run a crack, then there are two possible
+ways to continue. A) Did you apply a crackpatch? If yes, sorry for you, but you
+have to reinstall Cdrwin, because there is no way of telling what bytes the
+cracker has modified. B) Did you run another keymaker? If yes, then you'll want
+to know if the key you've used was OK and didn't cause any coasters. In order to
+do that, click on `Get information from cdrwin.dat` and point to your cdrwin path
+where you should find the file cdrwin.dat. Latter contains the keycode
+information. If you receive no error message, then you are fine and you can
+continue using that keycode.
+If, however, you receive a message saying that the keycode is not 100%, you've
+the option to fix the key. I can only strongly suggest that you do so....
+
+[VI] I have an original key, but it expired. Can you make it valid again?
+
+Yes, using my keymaker you can bring your old key back to life. To do so, first
+click on `don't randomize`. Then click on `Get information from cdrwin.dat` and
+point to your cdrwin path where you should find the file cdrwin.dat. Latter
+contains the keycode infromation of your original key. When done, you can change
+the expiration range. My keymaker will automatically calculate the new key.
+
+[VII] I have no girlfriend and need something else to get laid. Can you give me
+more technical information about how the keyscheme of Cdrwin works?
+
+Example:
+Name:       Raymond E. Feist
+Company:    Riftwar
+Unlock Key: 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+Check Key:  9357BB62-8CAC8011-908DCC07-8F76F774
+
+Cdrwin uses an Unlock Key and a Check Key. The latter is trivial as it is only
+used as a checksum check (hence the name!) that you've entered the Unlock Key
+correctly.
+
+The Unlock Key consists of -4- 32bit values. Use the following information in
+addition to the keymaker source to get the idea.
+
+1) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   Checksum of Name/Company. Further, using this 32bit value, Cdrwin
+   differentiates between unlock codes for Cdrwin and unlock codes for DAO
+   (each app uses an unique checksum-table). At last, the value is also used to
+   determine if your key is blacklisted or not.
+
+2) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   Encoded expiration information.
+
+3) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   Second Checksum, invoked after Cdrwin is started for the first time. If
+   invalid, anti-piracy message and exit.
+
+4) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   Hidden Checksum, during cd-burn process. If invalid, ... another item for
+   your coaster collection.
+
+5) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   Hidden Checksum, same as in 4).
+
+6) 022BD9CE-8E8759DF-1E0A95D8-917C62AC
+
+   ! IMPORANT !
+   Here is the answer why even my keymaker does not create keys that are 100%
+   identical with keys which have been legally purchased.
+
+   The two 16bit values are not yet (meaningfully) checked as of Cdrwin V3.8b.
+   This doesn't mean that my keymaker is not 100% working. It IS 100% for the
+   current version of Cdrwin and most probable for future versions as well,
+   UNTIL the programmers at Goldenhawk decide to implent that check. And until
+   then, I'll make sure that with each new version of Cdrwin my keymaker
+   doesn't miss that check. Fair enough?
+   For the smart ones among you: This is were the mysterious `don't randomize`
+   comes from. It simply prevents my keymaker to insert two random 16bit values
+   here. This is especially important when you want to change the expiration of
+   your real key, which has of course, the CORRECT two 16bit values. We don't
+   want to overwrite those with random ones... :)
+
+   TO ALL THOSE !%/$) IDIOTS WHO STILL CLAIM THAT THEY'RE HAVING
+   PROBLEMS USING MY KEYMAKER:
+
+   FOAD! You are simply wasting my time and the time of others with your
+   unqualified rubbish. If you think Cdrwin doesn't work probably after you've
+   used my keymaker, then blame it on someone else. Go and blame your g/f.
+   Or if you feel any safer, use one of the many patches that're floating around,
+   which claim that they are safer to use than a key code. Believe whatever you
+   want to believe. History has shown us the strength behind ignorance.
+
+[VIII] Fine, I see that you are convinced of your own work so I'll use it, too.
+Last question: With your ego, do you still have any friends left?
+
+I wouldn't go that far to call anyone my friend :> Yet, greetings to the following
+people :)
+
+      - everyone in X-FORCE. After years of fun & sorrow, I still love you!
+
+      - the first generation of UCF - when cracking had still some style.
+        Greetings at this place especially to Marquis de Soiree, whom I consider
+        my one and only tutor.
+
+      - Random, for he is the sickest of all people I know :) Without him,
+        things are just half as much fun.
+
+      - everyone in UNION and of course every proud #RC member :)
+        Especially to Devil, for the often philosophical debates; to Ratso, to
+        Drone, to ACP, to G-Rom, to Halvar, to Dezzy.
+
+      - every op in #WA; especially to Hugo for the endless debates why M$ is
+        evil or not :)
+
+      - everyone in COUNCIL.
+
+The Riddler / X-FORCE / UNION.
